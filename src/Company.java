@@ -32,14 +32,15 @@ public class Company {
         for (int i = 0; i < getSalesPersons().length; i++) {
 
             SalesPerson person = getSalesPersons()[i];
-
-            for (int j = 0; j < person.getSalesHistory().length; j++) {
-                if(person.getSalesHistory()[i] !=null) {
-                    if (person.getSalesHistory()[i].getValue() > highestSale) {
-                        highestSale = person.getSalesHistory()[i].getValue();
+            if(person !=null) {
+                for (int j = 0; j < person.getSalesHistory().length; j++) {
+                    if (person.getSalesHistory()[j] != null) {
+                        if (person.getSalesHistory()[j].getValue() > highestSale) {
+                            highestSale = person.getSalesHistory()[j].getValue();
+                        }
                     }
-                }
 
+                }
             }
 
         }

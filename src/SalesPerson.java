@@ -44,7 +44,7 @@ public class SalesPerson {
     }
 
     public Sales[] getSalesHistory() {
-        return salesHistory;
+        return this.salesHistory;
     }
 
     public void setSalesHistory(Sales[] salesHistory) {
